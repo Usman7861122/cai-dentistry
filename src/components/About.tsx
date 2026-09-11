@@ -69,18 +69,18 @@ export default function About() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
             Meet Your Dentist
           </p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-ink">Dr. Sara Ahmadi</h2>
+          <h2 className="mt-2 font-display text-3xl text-ink">Dr. Sara Ahmadi</h2>
           <p className="mt-4 text-ink-soft">
             Dr. Ahmadi has spent over 15 years perfecting smiles in Pasadena,
             with advanced training in cosmetic and restorative dentistry. She
-            believes a great smile should look completely natural — never
+            believes a great smile should look completely natural, never
             "done."
           </p>
 
           <div className="mt-8 grid grid-cols-3 gap-4">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-display text-2xl font-bold text-teal-dark">
+                <p className="font-display text-2xl text-teal-dark">
                   <Counter target={stat.target} suffix={stat.suffix} decimals={stat.decimals} />
                 </p>
                 <p className="mt-1 text-xs text-ink-soft">{stat.label}</p>

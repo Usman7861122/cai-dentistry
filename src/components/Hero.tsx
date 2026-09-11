@@ -14,11 +14,11 @@ export default function Hero() {
             Cosmetic Dentistry Specialists
           </p>
           <p className="font-display text-2xl italic text-ink-soft">Confidence,</p>
-          <h1 className="mt-1 font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
+          <h1 className="mt-1 font-display text-4xl leading-tight text-ink sm:text-5xl">
             Starts With Your Smile
           </h1>
           <p className="mt-5 max-w-md text-lg text-ink-soft">
-            Veneers, whitening, Invisalign, and full smile makeovers — crafted
+            Veneers, whitening, Invisalign, and full smile makeovers, crafted
             with an artist's eye and a specialist's precision.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -38,15 +38,16 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="flex items-center justify-center"
         >
-          {/* Swap this placeholder for a real photo of your office or a patient smile */}
-          <div className="flex h-72 w-full max-w-md items-center justify-center rounded-3xl bg-teal-light text-teal-dark sm:h-96">
-            <span className="text-sm font-medium">Your smile photo goes here</span>
-          </div>
+          <img
+            src="/images/Main.png"
+            alt="CAI Dentistry"
+            className="h-72 w-full max-w-md rounded-3xl object-cover sm:h-96"
+          />
         </motion.div>
       </div>
     </section>

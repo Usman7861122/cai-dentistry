@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const reviews = [
   {
     name: "Maria G.",
-    text: "My veneers look completely natural. People ask what I've changed but can't figure it out — I just look like myself, only better.",
+    text: "My veneers look completely natural. People ask what I've changed but can't figure it out. I just look like myself, only better.",
   },
   {
     name: "James T.",
@@ -22,7 +22,7 @@ export default function Testimonials() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
           Patient Stories
         </p>
-        <h2 className="mt-2 font-display text-3xl font-bold text-ink">
+        <h2 className="mt-2 font-display text-3xl text-ink">
           What Our Patients Say
         </h2>
       </div>
@@ -41,7 +41,7 @@ export default function Testimonials() {
             <blockquote className="mt-3 font-display italic text-ink-soft">
               "{review.text}"
             </blockquote>
-            <figcaption className="mt-4 font-semibold text-ink">— {review.name}</figcaption>
+            <figcaption className="mt-4 font-semibold text-ink">{review.name}</figcaption>
           </motion.figure>
         ))}
       </div>

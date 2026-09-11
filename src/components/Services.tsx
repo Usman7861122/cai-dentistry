@@ -31,6 +31,16 @@ const services = [
     description: "Fast, affordable fixes for chips, gaps, and discoloration.",
     emoji: "🪄",
   },
+  {
+    title: "Gum Contouring",
+    description: "Reshape an uneven gum line for a more balanced smile.",
+    emoji: "🌿",
+  },
+  {
+    title: "Dental Crowns",
+    description: "Restore a damaged tooth's strength, shape, and look.",
+    emoji: "👑",
+  },
 ];
 
 // Container + item variants let Framer Motion animate the cards
@@ -54,7 +64,7 @@ export default function Services() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
           What We Offer
         </p>
-        <h2 className="mt-2 font-display text-3xl font-bold text-ink">Our Services</h2>
+        <h2 className="mt-2 font-display text-3xl text-ink">Our Services</h2>
         <p className="mt-3 text-ink-soft">
           Every treatment your smile needs, under one roof.
         </p>
@@ -74,7 +84,7 @@ export default function Services() {
             className="rounded-2xl border border-ink/8 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="text-3xl">{service.emoji}</div>
-            <h3 className="mt-4 font-display font-semibold text-ink">{service.title}</h3>
+            <h3 className="mt-4 font-display text-ink">{service.title}</h3>
             <p className="mt-2 text-sm text-ink-soft">{service.description}</p>
           </motion.div>
         ))}

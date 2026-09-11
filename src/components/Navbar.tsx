@@ -1,7 +1,79 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles, Sun, Smile, Wand2, ShieldCheck, Move, Wrench, Layers } from "lucide-react";
+import { DropdownNavigation, type NavItem } from "./DropdownNavigation";
 
-const links = [
+const NAV_ITEMS: NavItem[] = [
+  {
+    id: 1,
+    label: "Services",
+    subMenus: [
+      {
+        title: "Cosmetic",
+        items: [
+          {
+            label: "Porcelain Veneers",
+            description: "Reshape and brighten your smile",
+            icon: Sparkles,
+            href: "#services",
+          },
+          {
+            label: "Teeth Whitening",
+            description: "Noticeably brighter in one visit",
+            icon: Sun,
+            href: "#services",
+          },
+          {
+            label: "Smile Makeovers",
+            description: "A full, personalized plan",
+            icon: Smile,
+            href: "#services",
+          },
+          {
+            label: "Gum Contouring",
+            description: "A more balanced gum line",
+            icon: Wand2,
+            href: "#services",
+          },
+        ],
+      },
+      {
+        title: "Restorative",
+        items: [
+          {
+            label: "Dental Implants",
+            description: "Permanent, natural-looking",
+            icon: ShieldCheck,
+            href: "#services",
+          },
+          {
+            label: "Invisalign & Aligners",
+            description: "Straighten teeth discreetly",
+            icon: Move,
+            href: "#services",
+          },
+          {
+            label: "Cosmetic Bonding",
+            description: "Fast fixes for chips and gaps",
+            icon: Wrench,
+            href: "#services",
+          },
+          {
+            label: "Dental Crowns",
+            description: "Restore strength and shape",
+            icon: Layers,
+            href: "#services",
+          },
+        ],
+      },
+    ],
+  },
+  { id: 2, label: "About", link: "#about" },
+  { id: 3, label: "Reviews", link: "#testimonials" },
+  { id: 4, label: "FAQ", link: "#faq" },
+];
+
+const mobileLinks = [
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
   { href: "#testimonials", label: "Reviews" },
@@ -15,20 +87,14 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur border-b border-ink/5">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="inline-flex items-baseline gap-1.5">
-          <span className="font-display text-2xl font-bold tracking-tight text-ink">CAI</span>
+          <span className="font-display text-2xl tracking-tight text-ink">CAI</span>
           <span className="font-display text-lg italic text-teal">Dentistry</span>
         </a>
 
-        {/* Links for larger screens */}
-        <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-ink-soft">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className="hover:text-teal transition-colors">
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {/* Dropdown navigation for larger screens */}
+        <div className="hidden md:block">
+          <DropdownNavigation navItems={NAV_ITEMS} />
+        </div>
 
         <a
           href="#appointment"
@@ -59,7 +125,7 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="md:hidden overflow-hidden bg-cream border-t border-ink/5"
           >
-            {[...links, { href: "#appointment", label: "Book Consultation" }].map((link) => (
+            {[...mobileLinks, { href: "#appointment", label: "Book Consultation" }].map((link) => (
               <li key={link.href} className="border-b border-ink/5">
                 <a
                   href={link.href}

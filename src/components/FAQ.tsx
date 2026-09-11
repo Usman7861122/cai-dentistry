@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "How do I know which treatment is right for me?",
     answer:
-      "Book a consultation — Dr. Ahmadi will examine your smile and walk you through the options that fit your goals and budget, no pressure.",
+      "Book a consultation. Dr. Ahmadi will examine your smile and walk you through the options that fit your goals and budget, no pressure.",
   },
 ];
 
@@ -31,7 +31,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
     <div className="border-b border-ink/10 py-4">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between text-left font-display font-semibold text-ink"
+        className="flex w-full items-center justify-between text-left font-display text-ink"
       >
         {question}
         <motion.span animate={{ rotate: open ? 45 : 0 }} className="text-2xl leading-none text-teal">
@@ -64,7 +64,7 @@ export default function FAQ() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
             Good To Know
           </p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-ink">
+          <h2 className="mt-2 font-display text-3xl text-ink">
             Frequently Asked Questions
           </h2>
         </div>

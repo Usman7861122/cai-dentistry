@@ -4,13 +4,14 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import About from "../components/About";
+import ScrollShowcase from "../components/ScrollShowcase";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import AppointmentForm from "../components/AppointmentForm";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="CAI Dentistry — Cosmetic Dentist in Pasadena, CA">
+<Layout title="CAI Dentistry | Cosmetic Dentist in Pasadena, CA">
   <!--
     client:load    -> loads and runs the component's JS as soon as the page loads.
                        Good for things visible immediately (Navbar, Hero).
@@ -22,6 +23,7 @@ import Footer from "../components/Footer.astro";
   <Hero client:load />
   <Services client:visible />
   <About client:visible />
+  <ScrollShowcase client:visible />
   <Testimonials client:visible />
   <FAQ client:visible />
   <AppointmentForm client:visible />

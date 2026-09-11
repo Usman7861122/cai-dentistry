@@ -5,8 +5,8 @@ export default function AppointmentForm() {
   const [submitted, setSubmitted] = useState(false);
 
   // This demo just shows a success message. To really receive bookings,
-  // connect this form to a service like Formspree or Web3Forms — see the
-  // "Make the form actually work" step in the guide.
+  // connect this form to a service like Formspree or Web3Forms (see the
+  // "Make the form actually work" step in the guide.)
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSubmitted(true);
@@ -18,7 +18,7 @@ export default function AppointmentForm() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
           Get Started
         </p>
-        <h2 className="mt-2 font-display text-3xl font-bold text-ink">Book a Consultation</h2>
+        <h2 className="mt-2 font-display text-3xl text-ink">Book a Consultation</h2>
         <p className="mt-3 text-ink-soft">
           Fill out the form and our front desk will confirm a time with you.
         </p>
