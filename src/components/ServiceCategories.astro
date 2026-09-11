@@ -28,7 +28,18 @@ const categories = [
 ];
 ---
 
-<section id="services" class="grid grid-cols-1 sm:grid-cols-3">
+<section id="services" class="bg-cream pt-20">
+  <div class="mx-auto max-w-xl px-6 text-center">
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+      What We Offer
+    </p>
+    <h2 class="mt-2 font-display text-3xl text-ink sm:text-4xl">Our Services</h2>
+    <p class="mt-3 text-ink-soft">
+      Every treatment your smile needs, organized into three simple categories.
+    </p>
+  </div>
+
+  <div class="mt-12 grid grid-cols-1 sm:grid-cols-3">
   {
     categories.map((category) => (
       <a
@@ -74,4 +85,5 @@ const categories = [
       </a>
     ))
   }
+  </div>
 </section>
