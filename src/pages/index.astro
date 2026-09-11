@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Services from "../components/Services";
+import ServiceCategories from "../components/ServiceCategories.astro";
 import About from "../components/About";
 import ScrollShowcase from "../components/ScrollShowcase";
 import Testimonials from "../components/Testimonials";
@@ -21,7 +21,7 @@ import Footer from "../components/Footer.astro";
   -->
   <Navbar client:load />
   <Hero client:load />
-  <Services client:visible />
+  <ServiceCategories />
   <About client:visible />
   <ScrollShowcase client:visible />
   <Testimonials client:visible />
