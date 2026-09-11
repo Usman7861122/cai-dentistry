@@ -50,13 +50,13 @@ export function DropdownNavigation({ navItems }: Props) {
         >
           {navItem.subMenus ? (
             <button
-              className="group relative flex cursor-pointer items-center justify-center gap-1 px-5 py-2 text-base text-ink-soft transition-colors duration-300 hover:text-ink"
+              className="group relative flex cursor-pointer items-center justify-center gap-1.5 px-6 py-3 text-lg text-ink-soft transition-colors duration-300 hover:text-ink"
               onMouseEnter={() => setIsHover(navItem.id)}
               onMouseLeave={() => setIsHover(null)}
             >
               <span>{navItem.label}</span>
               <ChevronDown
-                className={`h-5 w-5 transition-transform duration-300 group-hover:rotate-180 ${
+                className={`h-6 w-6 transition-transform duration-300 group-hover:rotate-180 ${
                   openMenu === navItem.label ? "rotate-180" : ""
                 }`}
               />
@@ -71,7 +71,7 @@ export function DropdownNavigation({ navItems }: Props) {
           ) : (
             <a
               href={navItem.link ?? "#"}
-              className="relative flex cursor-pointer items-center justify-center px-5 py-2 text-base text-ink-soft transition-colors duration-300 hover:text-ink"
+              className="relative flex cursor-pointer items-center justify-center px-6 py-3 text-lg text-ink-soft transition-colors duration-300 hover:text-ink"
               onMouseEnter={() => setIsHover(navItem.id)}
               onMouseLeave={() => setIsHover(null)}
             >

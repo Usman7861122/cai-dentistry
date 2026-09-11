@@ -87,10 +87,10 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur border-b border-ink/5">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-7">
         <a href="/" className="inline-flex items-baseline gap-1.5">
-          <span className="font-display text-3xl tracking-tight text-ink">CAI</span>
-          <span className="font-display text-xl italic text-teal">Dentistry</span>
+          <span className="font-display text-5xl tracking-tight text-ink">CAI</span>
+          <span className="font-display text-3xl italic text-teal">Dentistry</span>
         </a>
 
         {/* Dropdown navigation for larger screens */}
@@ -100,7 +100,7 @@ export default function Navbar() {
 
         <a
           href="/#appointment"
-          className="hidden md:inline-block rounded-full bg-teal px-6 py-2.5 text-base font-semibold text-cream hover:bg-teal-dark transition-colors"
+          className="hidden md:inline-block rounded-full bg-teal px-8 py-3 text-lg font-semibold text-cream hover:bg-teal-dark transition-colors"
         >
           Book Consultation
         </a>
