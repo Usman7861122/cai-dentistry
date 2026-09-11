@@ -44,7 +44,7 @@ export default function Hero() {
           className="flex items-center justify-center"
         >
           <img
-            src="/images/Main.png"
+            src="/images/pro-room.jpg"
             alt="CAI Dentistry"
             className="h-72 w-full max-w-md rounded-3xl object-cover sm:h-96"
           />
