@@ -50,13 +50,13 @@ export function DropdownNavigation({ navItems }: Props) {
         >
           {navItem.subMenus ? (
             <button
-              className="group relative flex cursor-pointer items-center justify-center gap-1 px-4 py-1.5 text-sm text-ink-soft transition-colors duration-300 hover:text-ink"
+              className="group relative flex cursor-pointer items-center justify-center gap-1 px-5 py-2 text-base text-ink-soft transition-colors duration-300 hover:text-ink"
               onMouseEnter={() => setIsHover(navItem.id)}
               onMouseLeave={() => setIsHover(null)}
             >
               <span>{navItem.label}</span>
               <ChevronDown
-                className={`h-4 w-4 transition-transform duration-300 group-hover:rotate-180 ${
+                className={`h-5 w-5 transition-transform duration-300 group-hover:rotate-180 ${
                   openMenu === navItem.label ? "rotate-180" : ""
                 }`}
               />
@@ -71,7 +71,7 @@ export function DropdownNavigation({ navItems }: Props) {
           ) : (
             <a
               href={navItem.link ?? "#"}
-              className="relative flex cursor-pointer items-center justify-center px-4 py-1.5 text-sm text-ink-soft transition-colors duration-300 hover:text-ink"
+              className="relative flex cursor-pointer items-center justify-center px-5 py-2 text-base text-ink-soft transition-colors duration-300 hover:text-ink"
               onMouseEnter={() => setIsHover(navItem.id)}
               onMouseLeave={() => setIsHover(null)}
             >
@@ -112,10 +112,10 @@ export function DropdownNavigation({ navItems }: Props) {
                                     <Icon className="h-5 w-5 flex-none" />
                                   </div>
                                   <div className="w-max leading-5">
-                                    <p className="shrink-0 text-sm font-medium text-ink">
+                                    <p className="shrink-0 text-base font-medium text-ink">
                                       {item.label}
                                     </p>
-                                    <p className="shrink-0 text-xs text-ink-soft transition-colors duration-300 group-hover:text-ink">
+                                    <p className="shrink-0 text-sm text-ink-soft transition-colors duration-300 group-hover:text-ink">
                                       {item.description}
                                     </p>
                                   </div>
