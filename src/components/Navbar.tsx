@@ -4,8 +4,9 @@ import { Sparkles, Sun, Smile, Wand2, ShieldCheck, Move, Wrench, Layers } from "
 import { DropdownNavigation, type NavItem } from "./DropdownNavigation";
 
 const NAV_ITEMS: NavItem[] = [
+  { id: 1, label: "Home", link: "/" },
   {
-    id: 1,
+    id: 2,
     label: "Services",
     subMenus: [
       {
@@ -68,12 +69,13 @@ const NAV_ITEMS: NavItem[] = [
       },
     ],
   },
-  { id: 2, label: "About", link: "/#about" },
-  { id: 3, label: "Reviews", link: "/#testimonials" },
-  { id: 4, label: "FAQ", link: "/#faq" },
+  { id: 3, label: "About", link: "/#about" },
+  { id: 4, label: "Reviews", link: "/#testimonials" },
+  { id: 5, label: "FAQ", link: "/#faq" },
 ];
 
 const mobileLinks = [
+  { href: "/", label: "Home" },
   { href: "/#services", label: "Services" },
   { href: "/#about", label: "About" },
   { href: "/#testimonials", label: "Reviews" },
@@ -86,7 +88,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur border-b border-ink/5">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/#top" className="inline-flex items-baseline gap-1.5">
+        <a href="/" className="inline-flex items-baseline gap-1.5">
           <span className="font-display text-2xl tracking-tight text-ink">CAI</span>
           <span className="font-display text-lg italic text-teal">Dentistry</span>
         </a>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-cream">
+    <section className="relative overflow-hidden bg-cream">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:py-28">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
