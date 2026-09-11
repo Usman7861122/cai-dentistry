@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* CAI Dentistry brand theme.
+   Defining these as Tailwind v4 "theme" variables automatically creates
+   matching utility classes, e.g. --color-teal -> bg-teal, text-teal, border-teal. */
+@theme {
+  --color-cream: #faf7f1;
+  --color-cream-dark: #f1ebe0;
+  --color-ink: #21201d;
+  --color-ink-soft: #55524a;
+  --color-teal: #0f766e;
+  --color-teal-light: #e6f3f0;
+  --color-teal-dark: #0b5c56;
+
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}

@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+import About from "../components/About";
+import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
+import AppointmentForm from "../components/AppointmentForm";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="CAI Dentistry — Cosmetic Dentist in Pasadena, CA">
+  <!--
+    client:load    -> loads and runs the component's JS as soon as the page loads.
+                       Good for things visible immediately (Navbar, Hero).
+    client:visible -> waits until the component scrolls into view before loading its JS.
+                       Good for sections further down the page, so a phone doesn't
+                       have to download and run JS for content it can't see yet.
+  -->
+  <Navbar client:load />
+  <Hero client:load />
+  <Services client:visible />
+  <About client:visible />
+  <Testimonials client:visible />
+  <FAQ client:visible />
+  <AppointmentForm client:visible />
+  <Footer />
+</Layout>
