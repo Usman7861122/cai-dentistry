@@ -1,0 +1,64 @@
+---
+// Shared layout for the /services/* pages. The top "hero" banner follows
+// the same pattern as the Carmel Valley Clinic reference the client sent:
+// a full-width background photo, a solid color overlay (our own teal,
+// not their blue), a small back-link, a title, and a short subtitle.
+import Layout from "../layouts/Layout.astro";
+import Navbar from "./Navbar";
+import Footer from "./Footer.astro";
+
+interface Props {
+  pageTitle: string;
+  description?: string;
+  heroImage: string;
+  eyebrow: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  backHref?: string;
+}
+
+const {
+  pageTitle,
+  description,
+  heroImage,
+  eyebrow,
+  heroTitle,
+  heroSubtitle,
+  backHref = "/#services",
+} = Astro.props;
+---
+
+<Layout title={pageTitle} description={description}>
+  <Navbar client:load />
+
+  <section class="relative flex h-[52vh] min-h-[380px] items-end overflow-hidden">
+    <img
+      src={heroImage}
+      alt={heroTitle}
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 bg-teal-dark/80"></div>
+
+    <div class="relative mx-auto w-full max-w-5xl px-6 pb-12">
+      <a
+        href={backHref}
+        class="inline-flex items-center gap-1.5 text-sm font-medium text-cream/80 transition-colors hover:text-cream"
+      >
+        <span aria-hidden="true">&larr;</span> Back to Services
+      </a>
+      <p class="mt-6 text-xs font-semibold uppercase tracking-[0.25em] text-teal-light">
+        {eyebrow}
+      </p>
+      <h1 class="mt-2 font-display text-4xl text-cream sm:text-5xl">
+        {heroTitle}
+      </h1>
+      <p class="mt-4 max-w-xl text-cream/85">
+        {heroSubtitle}
+      </p>
+    </div>
+  </section>
+
+  <slot />
+
+  <Footer />
+</Layout>

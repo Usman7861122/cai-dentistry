@@ -15,25 +15,25 @@ const NAV_ITEMS: NavItem[] = [
             label: "Porcelain Veneers",
             description: "Reshape and brighten your smile",
             icon: Sparkles,
-            href: "#services",
+            href: "/services/cosmetic",
           },
           {
             label: "Teeth Whitening",
             description: "Noticeably brighter in one visit",
             icon: Sun,
-            href: "#services",
+            href: "/services/cosmetic",
           },
           {
             label: "Smile Makeovers",
             description: "A full, personalized plan",
             icon: Smile,
-            href: "#services",
+            href: "/services/cosmetic",
           },
           {
             label: "Gum Contouring",
             description: "A more balanced gum line",
             icon: Wand2,
-            href: "#services",
+            href: "/services/cosmetic",
           },
         ],
       },
@@ -44,40 +44,40 @@ const NAV_ITEMS: NavItem[] = [
             label: "Dental Implants",
             description: "Permanent, natural-looking",
             icon: ShieldCheck,
-            href: "#services",
+            href: "/services/restorative",
           },
           {
             label: "Invisalign & Aligners",
             description: "Straighten teeth discreetly",
             icon: Move,
-            href: "#services",
+            href: "/services/restorative",
           },
           {
             label: "Cosmetic Bonding",
             description: "Fast fixes for chips and gaps",
             icon: Wrench,
-            href: "#services",
+            href: "/services/restorative",
           },
           {
             label: "Dental Crowns",
             description: "Restore strength and shape",
             icon: Layers,
-            href: "#services",
+            href: "/services/restorative",
           },
         ],
       },
     ],
   },
-  { id: 2, label: "About", link: "#about" },
-  { id: 3, label: "Reviews", link: "#testimonials" },
-  { id: 4, label: "FAQ", link: "#faq" },
+  { id: 2, label: "About", link: "/#about" },
+  { id: 3, label: "Reviews", link: "/#testimonials" },
+  { id: 4, label: "FAQ", link: "/#faq" },
 ];
 
 const mobileLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#testimonials", label: "Reviews" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "About" },
+  { href: "/#testimonials", label: "Reviews" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
@@ -86,7 +86,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur border-b border-ink/5">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="inline-flex items-baseline gap-1.5">
+        <a href="/#top" className="inline-flex items-baseline gap-1.5">
           <span className="font-display text-2xl tracking-tight text-ink">CAI</span>
           <span className="font-display text-lg italic text-teal">Dentistry</span>
         </a>
@@ -97,7 +97,7 @@ export default function Navbar() {
         </div>
 
         <a
-          href="#appointment"
+          href="/#appointment"
           className="hidden md:inline-block rounded-full bg-teal px-5 py-2 text-sm font-semibold text-cream hover:bg-teal-dark transition-colors"
         >
           Book Consultation
@@ -125,7 +125,7 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="md:hidden overflow-hidden bg-cream border-t border-ink/5"
           >
-            {[...mobileLinks, { href: "#appointment", label: "Book Consultation" }].map((link) => (
+            {[...mobileLinks, { href: "/#appointment", label: "Book Consultation" }].map((link) => (
               <li key={link.href} className="border-b border-ink/5">
                 <a
                   href={link.href}

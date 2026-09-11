@@ -1,0 +1,64 @@
+---
+import ServicePageLayout from "../../components/ServicePageLayout.astro";
+import { Sparkles, Sun, Smile, Wand2 } from "lucide-react";
+
+const treatments = [
+  {
+    icon: Sparkles,
+    name: "Porcelain Veneers",
+    description: "Thin, custom shells that reshape and brighten your smile, often in just two visits.",
+  },
+  {
+    icon: Sun,
+    name: "Teeth Whitening",
+    description: "Professional-grade whitening for noticeably brighter results in a single visit.",
+  },
+  {
+    icon: Smile,
+    name: "Smile Makeovers",
+    description: "A full, personalized plan that combines treatments to redesign your smile.",
+  },
+  {
+    icon: Wand2,
+    name: "Gum Contouring",
+    description: "Gentle reshaping for a more even, balanced gum line.",
+  },
+];
+---
+
+<ServicePageLayout
+  pageTitle="Cosmetic Dentistry | CAI Dentistry"
+  description="Veneers, whitening, smile makeovers, and gum contouring at CAI Dentistry in Pasadena, CA."
+  heroImage="/images/amr-taha-FMcKJXPQtY0-unsplash.jpg"
+  eyebrow="Our Services"
+  heroTitle="Cosmetic Dentistry"
+  heroSubtitle="Veneers, whitening, and smile makeovers designed to look completely natural."
+>
+  <section class="mx-auto max-w-5xl px-6 py-20">
+    <div class="grid gap-8 sm:grid-cols-2">
+      {treatments.map((t) => {
+        const Icon = t.icon;
+        return (
+          <div class="rounded-2xl border border-ink/8 bg-white p-8">
+            <div class="flex size-12 items-center justify-center rounded-full bg-teal-light text-teal-dark">
+              <Icon className="h-6 w-6" />
+            </div>
+            <h3 class="mt-5 font-display text-xl text-ink">{t.name}</h3>
+            <p class="mt-2 text-sm text-ink-soft">{t.description}</p>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="bg-teal-light py-16 text-center">
+    <h2 class="font-display text-3xl text-ink">Ready to start your smile journey?</h2>
+    <p class="mt-3 text-ink-soft">Book a consultation and we will build a plan just for you.</p>
+    <a
+      href="/#appointment"
+      class="mt-6 inline-block rounded-full bg-teal px-7 py-3 text-sm font-semibold text-cream transition-colors hover:bg-teal-dark"
+    >
+      Book a Consultation
+    </a>
+  </section>
+</ServicePageLayout>
